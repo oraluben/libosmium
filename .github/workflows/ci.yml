@@ -229,13 +229,15 @@ jobs:
 
   windows:
     runs-on: windows-latest
+    env:
+      BUILD_TYPE: Release
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
       - uses: ./.github/actions/install-windows
       - uses: ./.github/actions/build-windows
-      - uses: ./.github/actions/ctest
+      - uses: ./.github/actions/ctest-windows
 
 # does not work yet
 #  windows-msys2:
