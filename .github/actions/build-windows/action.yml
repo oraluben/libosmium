@@ -19,7 +19,7 @@ runs:
         working-directory: build
 
       - name: Build
-        run: cmake --build .
+        run: cmake --build . --config ${BUILD_TYPE}
         shell: bash
         working-directory: build
 
