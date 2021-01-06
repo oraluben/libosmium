@@ -1,0 +1,15 @@
+name: Install Prerequisites on Windows
+
+runs:
+  using: composite
+
+  steps:
+    - name: Install packages
+      run: |
+        vcpkg install boost bzip2 zlib expat
+      shell: powershell
+    - name: Install from git
+      run: |
+        git clone --quiet --depth 1 https://github.com/mapbox/protozero.git ../protozero
+      shell: bash
+
