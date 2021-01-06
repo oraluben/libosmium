@@ -14,7 +14,7 @@ runs:
             proj:x64-windows \
             sparsehash:x64-windows \
             zlib:x64-windows
-      shell: powershell
+      shell: bash
     - name: Install from git
       run: |
         git clone --quiet --depth 1 https://github.com/mapbox/protozero.git ../protozero
