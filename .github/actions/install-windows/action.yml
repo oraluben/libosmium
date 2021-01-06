@@ -6,7 +6,7 @@ runs:
   steps:
     - name: Install packages
       run: |
-        vcpkg install bzip2 zlib expat
+        vcpkg install bzip2:x64-windows zlib:x64-windows expat:x64-windows
       shell: powershell
     - name: Install from git
       run: |
