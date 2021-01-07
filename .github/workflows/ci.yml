@@ -267,7 +267,7 @@ jobs:
         with:
           msystem: MINGW64
           update: true
-          install: git mingw-w64-x86_64-gcc-libs mingw-w64-x86_64-gcc mingw-w64-x86_64-geos mingw-w64-x86_64-cmake mingw-w64-x86_64-boost mingw-w64-x86_64-cppcheck mingw-w64-x86_64-doxygen mingw-w64-x86_64-gdb mingw-w64-x86_64-sparsehash mingw-w64-x86_64-gdal mingw-w64-x86_64-ruby mingw-w64-x86_64-libspatialite mingw-w64-x86_64-spatialite-tools mingw-w64-x86_64-clang-tools-extra
+          install: git mingw-w64-x86_64-gcc-libs mingw-w64-x86_64-gcc mingw-w64-x86_64-geos mingw-w64-x86_64-make mingw-w64-x86_64-cmake mingw-w64-x86_64-boost mingw-w64-x86_64-cppcheck mingw-w64-x86_64-doxygen mingw-w64-x86_64-gdb mingw-w64-x86_64-sparsehash mingw-w64-x86_64-gdal mingw-w64-x86_64-ruby mingw-w64-x86_64-libspatialite mingw-w64-x86_64-spatialite-tools mingw-w64-x86_64-clang-tools-extra
       - uses: actions/checkout@v2
         with:
           submodules: true
@@ -286,7 +286,7 @@ jobs:
            -DPROTOZERO_INCLUDE_DIR=${GITHUB_WORKSPACE}/../protozero/include
       - name: Build
         run: |
-          cmake --build .
+          make
         working-directory: build
       - uses: ./.github/actions/ctest
 
