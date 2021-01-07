@@ -4,22 +4,8 @@ runs:
     using: composite
 
     steps:
-      - name: Create build directory
-        run: mkdir build
-        shell: bash
-
-      - name: Configure
-        run: |
-          BOOST_ROOT=$BOOST_ROOT_1_72_0 cmake -LA .. \
-           -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake \
-           -DBUILD_HEADERS=OFF \
-           -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
-           -DPROTOZERO_INCLUDE_DIR=${GITHUB_WORKSPACE}/../protozero/include
-        shell: bash
-        working-directory: build
-
       - name: Build
-        run: cmake --build . --config ${BUILD_TYPE}
+        run: cmake --build --config ${BUILD_TYPE} .
         shell: bash
         working-directory: build
 
