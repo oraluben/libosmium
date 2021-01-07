@@ -14,6 +14,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -28,6 +29,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -42,6 +44,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -56,6 +59,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -70,6 +74,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -86,6 +91,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -100,6 +106,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -114,6 +121,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -128,6 +136,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -142,6 +151,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -157,6 +167,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
       - name: Coverage
@@ -182,6 +193,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-ubuntu
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -196,6 +208,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-macos
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -210,6 +223,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-macos
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -224,6 +238,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-macos
+      - uses: ./.github/actions/cmake
       - uses: ./.github/actions/build
       - uses: ./.github/actions/ctest
 
@@ -236,6 +251,7 @@ jobs:
         with:
           submodules: true
       - uses: ./.github/actions/install-windows
+      - uses: ./.github/actions/cmake-windows
       - uses: ./.github/actions/build-windows
       - uses: ./.github/actions/ctest-windows
 
@@ -260,7 +276,6 @@ jobs:
           echo $PATH
           cd ..
           git clone --depth 1 https://github.com/mapbox/protozero
-          gem.cmd install json
       - name: CI-Build
         run: |
           mkdir build
