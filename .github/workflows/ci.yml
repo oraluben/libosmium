@@ -281,6 +281,7 @@ jobs:
           mkdir build
           cd build
           cmake -LA .. \
+           -G "MSYS Makefiles" \
            -DBUILD_DATA_TESTS=ON \
            -DBUILD_HEADERS=OFF \
            -DPROTOZERO_INCLUDE_DIR=${GITHUB_WORKSPACE}/../protozero/include
