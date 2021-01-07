@@ -285,8 +285,7 @@ jobs:
            -DBUILD_HEADERS=OFF \
            -DPROTOZERO_INCLUDE_DIR=${GITHUB_WORKSPACE}/../protozero/include
       - name: Build
-        run: |
-          make
+        run: mingw32-make
         working-directory: build
       - uses: ./.github/actions/ctest
 
